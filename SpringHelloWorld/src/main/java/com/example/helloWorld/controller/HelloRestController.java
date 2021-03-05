@@ -23,4 +23,12 @@ public class HelloRestController {
     public String sayHelloParam(@PathVariable String name) {
         return "Hello "+ name +" !";
     }
+
+    //curl -X POST -H "Content-Tpe: application/json"
+    //          -d '{"firstName": "Mark","lastName": "Taylor"}'
+    //         "http://localhost:8080/hello/post" -w "\n"
+    @PostMapping("/post")
+    public String sayHello(@RequestBody User user) {
+        return "Hello "+ user.getFirstName() + " " + user.getLastName() + " !";
+    }
 }
