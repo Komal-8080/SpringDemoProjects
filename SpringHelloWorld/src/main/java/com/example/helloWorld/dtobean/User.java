@@ -1,5 +1,8 @@
-package com.example.helloWorld.controller;
+package com.example.helloWorld.dtobean;
 
+import org.springframework.context.annotation.Bean;
+
+@Bean
 public class User {
     private String firstName;
     private String lastName;
