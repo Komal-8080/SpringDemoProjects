@@ -1,5 +1,6 @@
 package com.example.helloWorld.controller;
 
+import com.example.helloWorld.dtobean.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -27,6 +28,7 @@ public class HelloRestController {
     //curl -X POST -H "Content-Tpe: application/json"
     //          -d '{"firstName": "Mark","lastName": "Taylor"}'
     //         "http://localhost:8080/hello/post" -w "\n"
+    //curl -H "Content-Type: application/json" -X POST http://localhost:8080/hello/post -d "{\"firstName\": \"Mark\",\"lastName\": \"Taylor\"}"
     @PostMapping("/post")
     public String sayHello(@RequestBody User user) {
         return "Hello "+ user.getFirstName() + " " + user.getLastName() + " !";
