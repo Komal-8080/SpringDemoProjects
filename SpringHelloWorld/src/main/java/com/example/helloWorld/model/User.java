@@ -1,6 +1,4 @@
-package com.example.helloWorld.dtobean;
-
-import org.springframework.context.annotation.Bean;
+package com.example.helloWorld.model;
 
 
 public class User {
@@ -20,6 +18,6 @@ public class User {
     }
 
     public void setLastName(String lastName) {
-        this.lastName =lastName;
+        this.lastName = lastName;
     }
 }
